@@ -74,7 +74,7 @@ git submodule update --init --recursive
 
 Due to distribution restriction, Qiling Framework will not bundle Microsoft Windows DLL files and registry. Please copy respective DLLs and registry from Microsoft Windows System. For Windows 10 usually found in C:\Windows\system32 (64bit dll) and C:\Windows\SysWOW64 (32bits dll) and place them in $rootfs/dlls
 
-We also included a script named `dllscollector.bat`. Run this on Windows, under **Administrator** privilege, to collect all the necessary dlls and registries.
+We also included a script named `dllscollector.bat`. Run this on Windows, in qiling's root directory as cwd, with **Administrator** privilege, to collect all the necessary dlls and registries.And then put them into *correct* place. If you just right click that bat and run it with **Administrator** privilege, please look up them in `C:\Windows\System32\example`.Copy that example directory into qiling's root diectory and just merge the two `example` directory.
 
 ```cmd
 examples/scripts/dllscollector.bat
